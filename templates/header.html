@@ -1,5 +1,6 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+<<<<<<< Updated upstream
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="{% url 'blog_app:index' %}">ブログサイト</a>
@@ -28,3 +29,38 @@
     </ul>
   </div>
  </nav>
+=======
+   <span class="navbar-toggler-icon"></span>
+ </button>
+ <a class="navbar-brand" href="{% url 'blog_app:index' %}">Shuto Blog</a>
+
+ <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+   <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+　　　　{% if request.user.is_authenticated %}
+     <li class="nav-item">
+       <a class="nav-link" href="{% url 'user_app:detail' request.user.id %}">{{request.user.username}}</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="{% url 'blog_app:add' %}">投稿</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="{% url 'user_app:logout' %}">Logout</a>
+     </li>
+     {% else %}
+     <li class="nav-item">
+       <a class="nav-link" href="{% url 'user_app:signup' %}">Signup</a>
+     </li>
+
+     <li class="nav-item">
+       <a class="nav-link" href="{% url 'user_app:login' %}">Login</a>
+     </li>
+     {% endif %}
+   </ul>
+   <form class="form-inline my-2" method="GET" action="{% url 'blog_app:index' %}">
+    <input type="text" class="form-control" name="q" value="{{request.GET.q}}" placeholder="keyword">
+    <button type="submit" value="search" class="btn btn-light">search</button>
+   </form>
+ </div>
+</nav>
+
+>>>>>>> Stashed changes
