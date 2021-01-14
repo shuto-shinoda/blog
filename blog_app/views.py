@@ -8,9 +8,6 @@ from django.contrib.auth.decorators import login_required
 
 from django.db.models import Q
 
-<<<<<<< Updated upstream
-# Create your views here.
-=======
 from django.template.loader import render_to_string
 from django.http import JsonResponse
 #検証用の関数
@@ -18,7 +15,6 @@ def is_valid_q(q):
    return q != '' and q is not None
 
 #関数内
->>>>>>> Stashed changes
 def index(request):
    query = request.GET.get('q')
    if query:
