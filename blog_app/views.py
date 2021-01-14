@@ -8,11 +8,23 @@ from django.contrib.auth.decorators import login_required
 
 from django.db.models import Q
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+# Create your views here.
+=======
+from django.template.loader import render_to_string
+from django.http import JsonResponse
+>>>>>>> main
 #検証用の関数
 def is_valid_q(q):
    return q != '' and q is not None
 
 #関数内
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> main
 def index(request):
    posts = Post.objects.all().order_by('-created_at')
    title_or_user = request.GET.get('title_or_user')
@@ -38,8 +50,11 @@ def index(request):
    {'posts': posts, 'title_or_user': title_or_user , 'date_min': date_min, 'date_max': date_max ,'tag': tag})
 
 def detail(request, post_id):
-     post = get_object_or_404(Post, id=post_id)
-     return render(request, 'blog_app/detail.html', {'post': post})
+   post = get_object_or_404(Post, id=post_id)
+   liked = False
+   if post.like.filter(id=request.user.id).exists():
+       liked = True
+   return render(request, 'blog_app/detail.html', {'post': post, 'liked': liked})
 
 @login_required
 def add(request):
@@ -71,3 +86,20 @@ def delete(request, post_id):
    post = get_object_or_404(Post, id=post_id)
    post.delete()
    return redirect('blog_app:index')
+
+def like(request):
+   post = get_object_or_404(Post, id=request.POST.get('post_id'))
+   liked = False
+   if post.like.filter(id=request.user.id).exists():
+       post.like.remove(request.user)
+       liked = False
+   else:    
+       post.like.add(request.user)
+       liked = True
+   context={
+       'post': post,
+       'liked': liked,
+   }    
+   if request.is_ajax():
+       html = render_to_string('blog_app/like.html', context, request=request )
+       return JsonResponse({'form': html})
