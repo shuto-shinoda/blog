@@ -26,10 +26,6 @@
      </li>
      {% endif %}
    </ul>
-   <form class="form-inline my-2" method="GET" action="{% url 'blog_app:index' %}">
-    <input type="text" class="form-control" name="q" value="{{request.GET.q}}" placeholder="keyword">
-    <button type="submit" value="search" class="btn btn-primary">検索</button>
-   </form>
  </div>
 </nav>
 
