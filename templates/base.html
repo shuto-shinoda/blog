@@ -8,6 +8,7 @@
    <meta name="description" content=""/>
    <link rel="stylesheet" href="{% static 'css/style.css' %}">
    <title>Blog</title>
+   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
  </head>
  <body>
  {% include 'header.html' %}
@@ -16,5 +17,28 @@
    {% endblock %}   
  </div>
  {% include 'footer.html' %}
- </body>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+ <script type="text/javascript">
+  $(document).ready(function(event){
+  $(document).on('click', '#like', function(event){
+     event.preventDefault();
+     var post_id = $(this).attr('value');
+     $.ajax({
+     type: 'POST',
+     url: '{% url "blog_app:like" %}',
+     data: {'post_id': post_id, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+     dataType: 'json',
+     success: function(response){
+       $('#like').html(response['form'])
+       console.log($('#like').html(response['form']));
+     },
+     error: function(rs, e){
+       console.log(rs.responseText);
+     }
+    });
+  });
+ });
+  </script>  
+</body>
 </html>
