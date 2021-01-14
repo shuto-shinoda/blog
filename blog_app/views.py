@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404, redirect
@@ -8,23 +7,13 @@ from django.contrib.auth.decorators import login_required
 
 from django.db.models import Q
 
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-# Create your views here.
-=======
 from django.template.loader import render_to_string
 from django.http import JsonResponse
->>>>>>> main
 #検証用の関数
 def is_valid_q(q):
    return q != '' and q is not None
 
 #関数内
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> main
 def index(request):
    posts = Post.objects.all().order_by('-created_at')
    title_or_user = request.GET.get('title_or_user')
