@@ -17,10 +17,6 @@
 {% endif%}
 <!-- 検索結果の数 -->
 
-{% if query %}
-<p class="text-center font-weight-bold h4">{{posts.count}}件</p>
-{% endif%}
-
 <div class="d-flex justify-content-center flex-wrap">
 {% for post in posts%}
 <a href="{% url 'blog_app:detail' post_id=post.id %}">
