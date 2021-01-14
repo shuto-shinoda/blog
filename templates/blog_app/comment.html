@@ -12,6 +12,7 @@
   <!-- 削除ボタンの表示、非表示 -->
      {% if request.user == post.user or request.user == comment.user %}
      <a href="{% url 'blog_app:comment_delete' comment_id=comment.id %}"><i class="text-danger far fa-trash-alt">削除</i></a>
+     <a href="{% url 'blog_app:comment_delete' comment_id=comment.id %}"><i class="text-danger far fa-trash-alt">削除/i></a>
    </p>
      {% endif %}
      </footer>
