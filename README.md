@@ -31,3 +31,11 @@
 ### ・記事ページを開くと下部にコメント投稿欄が表示される
 ### ・ゴミ箱マーククリックでコメント削除
 
+## 開発環境
+
+$ git clone https://github.com/shuto-shinoda/blog
+$ cd blog
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
+$ python3 manage.py runserver
+👉 http://localhost:8000
