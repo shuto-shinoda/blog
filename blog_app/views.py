@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Post, Tag
-from .forms import PostAddForm
+from .models import Post, Tag, Comment
+from .forms import PostAddForm, ContactForm, CmtForm
 from django.contrib.auth.decorators import login_required
 
 from django.db.models import Q
@@ -40,10 +40,26 @@ def index(request):
 
 def detail(request, post_id):
    post = get_object_or_404(Post, id=post_id)
+   comments = Comment.objects.filter(post=post).order_by('-created_at')
    liked = False
    if post.like.filter(id=request.user.id).exists():
        liked = True
-   return render(request, 'blog_app/detail.html', {'post': post, 'liked': liked})
+   if request.method == "POST":
+       form = CmtForm(request.POST or None)
+       if form.is_valid():
+           text = request.POST.get('text')
+           comment = Comment.objects.create(post=post, user=request.user, text=text)
+           comment.save()
+           return redirect('blog_app:detail', post_id=post.id)
+   else:
+       form = CmtForm()
+   context = {
+       'post': post,
+       'comments': comments,
+       'form': form,
+       'liked': liked
+   }    
+   return render(request, 'blog_app/detail.html', {'post': post, 'form': form, 'comments': comments, 'liked': liked})
 
 @login_required
 def add(request):
