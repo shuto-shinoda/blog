@@ -33,9 +33,9 @@
 
 ## 開発環境
 
-$ git clone https://github.com/shuto-shinoda/blog
-$ cd blog
-$ python3 manage.py makemigrations
-$ python3 manage.py migrate
-$ python3 manage.py runserver
-👉 http://localhost:8000
+#### $ git clone https://github.com/shuto-shinoda/blog
+#### $ cd blog
+#### $ python3 manage.py makemigrations
+#### $ python3 manage.py migrate
+#### $ python3 manage.py runserver
+#### 👉 http://localhost:8000
