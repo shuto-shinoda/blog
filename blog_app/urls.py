@@ -8,6 +8,8 @@ urlpatterns = [
    path('add/', views.add, name='add'),
    path('edit/<int:post_id>/', views.edit, name='edit'),
    path('delete/<int:post_id>/', views.delete, name='delete'),
-      #いいね用URL
+   #いいね用URL
    path('like/', views.like, name='like'),
+   #コメント削除
+   path('comment/<int:comment_id>/', views.comment_delete, name='comment_delete'),
 ]

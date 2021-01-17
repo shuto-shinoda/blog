@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post, Tag, Comment
-from .forms import PostAddForm, ContactForm, CmtForm
+from .forms import PostAddForm, CmtForm
 from django.contrib.auth.decorators import login_required
 
 from django.db.models import Q
@@ -50,7 +50,6 @@ def detail(request, post_id):
            text = request.POST.get('text')
            comment = Comment.objects.create(post=post, user=request.user, text=text)
            comment.save()
-           return redirect('blog_app:detail', post_id=post.id)
    else:
        form = CmtForm()
    context = {
@@ -58,9 +57,12 @@ def detail(request, post_id):
        'comments': comments,
        'form': form,
        'liked': liked
-   }    
+   }
+   if request.is_ajax():
+       html = render_to_string('blog_app/comment.html', context, request=request )
+       return JsonResponse({'form': html})    
    return render(request, 'blog_app/detail.html', {'post': post, 'form': form, 'comments': comments, 'liked': liked})
-
+   
 @login_required
 def add(request):
    if request.method == "POST":
@@ -108,3 +110,8 @@ def like(request):
    if request.is_ajax():
        html = render_to_string('blog_app/like.html', context, request=request )
        return JsonResponse({'form': html})
+
+def comment_delete(request, comment_id):
+   comment = get_object_or_404(Comment, id=comment_id)
+   comment.delete()
+   return redirect('blog_app:detail', post_id=comment.post.id)
