@@ -1,7 +1,8 @@
 # ASOBIBA
 
 ## 遊び場の共有、紹介を目的としたブログアプリ
-### https://gyazo.com/6316e3cb8218de3505e0b3c3ffab19fc
+### ![6316e3cb8218de3505e0b3c3ffab19fc](https://user-images.githubusercontent.com/69189662/105320532-9dfd0d00-5c09-11eb-990b-5bad75afbde7.jpg)
+
 
 ## 概要
 ### 新しく発見した遊び場所やよく行く遊び場所の魅力などの共有やコミュニケーションを目的としたアプリです。
@@ -12,22 +13,30 @@
 ## 利用方法
 
 ## ・ユーザー管理機能
-### https://gyazo.com/696aab8b13178aa5c378704621405930
+### https://user-images.githubusercontent.com/69189662/105320166-30e97780-5c09-11eb-8e69-59ddc52653e6.mp4
+
 ### ・新規登録
 ### ・ログイン
 ### ・ログアウト
 
 ## ・投稿機能
-### https://gyazo.com/ce0d84095b9a1341d365abf1eed1480e
+### https://user-images.githubusercontent.com/69189662/105320791-f0d6c480-5c09-11eb-89c5-cd4151e29799.mp4
+
+
 ### ・ログインユーザーのみ投稿できる
 ### ・タイトル、本文、カテゴリーの入力は必須である
-### https://gyazo.com/95e86413faa330db08551e0c07eabfb6
+### https://user-images.githubusercontent.com/69189662/105320943-28457100-5c0a-11eb-9730-eb42dc38be49.mp4
+
 
 ### ・編集、削除機能
-### https://gyazo.com/3752586334d59d5a48349771e038b5b7
+### https://user-images.githubusercontent.com/69189662/105321098-5cb92d00-5c0a-11eb-8005-dcf6f52d86c4.mp4
+
+
 
 ## コメント機能
-### https://gyazo.com/418ea402e3ffa21d7d334048d9a4875c
+### 
+https://user-images.githubusercontent.com/69189662/105321205-840ffa00-5c0a-11eb-861f-8109cdd4d9fc.mp4
+
 ### ・記事ページを開くと下部にコメント投稿欄が表示される
 ### ・ゴミ箱マーククリックでコメント削除
 
