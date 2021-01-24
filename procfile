@@ -1,0 +1,1 @@
+web: gunicorn asobiba-blog.wsgi --log-file -
