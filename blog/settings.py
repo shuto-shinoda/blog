@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -25,7 +24,7 @@ SECRET_KEY = 'ho=4id_2k8ax!#lgr+iw!hg%&_i*_6_!$#p5fz-dhsyh(l-$!2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['asobiba-blog.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['django-blog-new.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -128,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATIC_ROOT = (os.path.join(BASE_DIR, "static"),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
