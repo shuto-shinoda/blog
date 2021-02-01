@@ -39,7 +39,7 @@
 #### `・投稿詳細表示機能`
 各投稿詳細は投稿のタイトルをクリックで閲覧可能です。
 
-#### ・投稿編集・削除機能
+#### `・投稿編集・削除機能`
 
 <img width="1438" alt="6f917ba78bf013c5c263ea3f2c96555f" src="https://user-images.githubusercontent.com/69189662/106409004-ed9dcd00-6482-11eb-8edb-73adde5a08a5.png">
 
