@@ -45,7 +45,7 @@
 
 投稿者本人のみ投稿編集・削除が可能です。
 
-####` ・ユーザー詳細表示機能`
+#### `・ユーザー詳細表示機能`
 
 <img width="1436" alt="2576472f195fd54ceb45f4fb0d57adbe" src="https://user-images.githubusercontent.com/69189662/106410734-db259280-6486-11eb-9221-4daaf637e5f0.png">
 
