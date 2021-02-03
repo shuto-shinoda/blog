@@ -1,6 +1,5 @@
 # ASOBIBA
 
-## 遊び場の共有、紹介を目的としたブログアプリ
 ### ![6316e3cb8218de3505e0b3c3ffab19fc](https://user-images.githubusercontent.com/69189662/105320532-9dfd0d00-5c09-11eb-990b-5bad75afbde7.jpg)
 
 
