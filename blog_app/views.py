@@ -9,6 +9,7 @@ from django.db.models import Q
 
 from django.template.loader import render_to_string
 from django.http import JsonResponse
+
 #検証用の関数
 def is_valid_q(q):
    return q != '' and q is not None
@@ -103,6 +104,7 @@ def like(request):
    else:    
        post.like.add(request.user)
        liked = True
+
    context={
        'post': post,
        'liked': liked,
