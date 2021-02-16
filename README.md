@@ -48,14 +48,14 @@
 
 ### `・投稿編集・削除機能`
 
-<img width="1438" alt="6f917ba78bf013c5c263ea3f2c96555f" src="https://user-images.githubusercontent.com/69189662/106409004-ed9dcd00-6482-11eb-8edb-73adde5a08a5.png">
+<img width="1438" alt="d3bc6919ddce15e66b307aedd7826811" src="https://user-images.githubusercontent.com/69189662/108077594-0a0b4d80-70b0-11eb-8013-cf2f62b188c8.png">
 
 投稿者本人のみ投稿編集・削除が可能です。
 
 
 ### `・ユーザー詳細表示機能`
 
-<img width="1436" alt="2576472f195fd54ceb45f4fb0d57adbe" src="https://user-images.githubusercontent.com/69189662/106410734-db259280-6486-11eb-9221-4daaf637e5f0.png">
+<img width="1439" alt="3baec8e4c9721d4adcf8854c4f8b027f" src="https://user-images.githubusercontent.com/69189662/108079594-53f53300-70b2-11eb-949f-5e46db37bc6e.png">
 
 各ユーザーの投稿一覧が閲覧可能
 
