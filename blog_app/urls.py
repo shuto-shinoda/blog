@@ -12,4 +12,7 @@ urlpatterns = [
    path('like/', views.like, name='like'),
    #コメント削除
    path('comment/<int:comment_id>/', views.comment_delete, name='comment_delete'),
+   #お問い合わせ
+   path('contact/', views.contact, name='contact'),  #お問い合わせページ
+   path('contact/done/', views.done, name='done'),   #お問い合わせ後のページ ]
 ]
